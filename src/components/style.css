@@ -1,0 +1,317 @@
+.nav{
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aqua;
+  }
+  .items-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  
+  /* Style for individual item */
+  .item {
+    width: calc(25% - 20px); /* 20px is for the gap between items */
+    margin: 10px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* When there are 4 or fewer items, switch to column layout */
+  @media (max-width: 600px) {
+    .items-container {
+      flex-direction: column;
+      align-content: stretch;
+    }
+  
+    .item {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+  
+  
+
+  .AboutFriends{
+    display: flex;
+    border: 2px solid black;
+    margin: 50px;
+  }
+
+  .FriendList{
+    
+    margin: 20px;
+    padding: 20px;
+    margin: 50px;
+  }
+
+  .PostList{
+    width: 500px;
+  }
+
+  .red-error {
+    color: red;
+  }
+  
+  .green-success {
+    color: green;
+  }
+  
+  .postwidth{
+    margin: 10px;
+    padding: 10px;
+    
+    border-radius: 10px;
+    
+  }
+  .postname{
+    font-weight: 600;
+    font-family: cursive;
+  }
+
+  .msgwidth{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid violet;
+    border-radius: 10px;
+    background-color: violet;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  .people{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .people:hover{
+    background-color: cyan;
+  }
+
+  .loginform{
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+    height:20px;
+  }
+
+  .acceptbutton{
+    background-color: blue;
+    color: white;
+    box-sizing: border-box;
+    border-color: blue;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+  }
+  .acceptbutton:hover{
+    background-color: rgb(16, 70, 255);
+    color: whitesmoke;
+    box-sizing: border-box;
+    border-color: rgb(16, 118, 252);
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+  }
+  .loginpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .op{
+    background-color: #FF69B4;
+  }
+  .acceptbutton1{
+    background-color: rgb(247, 7, 175);
+    color: white;
+    box-sizing: border-box;
+    border-color: rgba(255, 0, 212, 0.856);
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+  .acceptbutton1:hover{
+    background-color: rgb(255, 7, 175);
+    color: whitesmoke;
+    box-sizing: border-box;
+    border-color: rgb(255, 3, 160 );
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: 600;
+    
+  }
+  .lebel{
+    font-weight: 600;
+  }
+  .form_primary{
+    border: 2px solid blue;
+    border-radius: 10px;
+    width: 500px;
+    padding: 10px;
+    margin: 20px;
+    
+  }
+  .mb-3{
+    margin: 30px;
+    
+    /* padding: 20px; */
+  }
+  .Logo{
+    font-size: 30 px;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: darkslateblue;
+
+  }
+  .userbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    color: rgb(19, 197, 197);
+  }
+  .post{
+    width: 100%;
+    /* margin: 10px; */
+  }
+  .nameatnav{
+    position: absolute;
+    right: 10%;
+    margin: 5 px;
+    padding: 10px;
+    color: #f0f0f0;
+    background-color:skyblue;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .noreq{
+    margin: 20px;
+    padding: 20px;
+  }
+  .nav {
+    /* Define styles for normal icons here */
+    /* color: #999;
+    margin: 10px; */
+  }
+  
+  .nav.active {
+    /* Define styles for active icons here */
+    color: #FF69B4; /* Pink color */
+    /* You can adjust other styles, such as opacity, background color, etc. */
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.5fr; /* Columns: fixed - scrollable - fixed */
+    grid-gap: 20px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .postinput{
+    width: 80%;
+  }
+  .column {
+    padding: 20px;
+    border: 1px solid #ccc;
+    overflow-y: auto; /* Enable vertical scroll */
+  }
+  
+  .fixed {
+    background-color: #f0f0f0;
+  }
+  
+  .scrollable {
+    background-color: white;
+  }
+  
+  .searchbar{
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    border-color: blue;
+  }
+
+  .postpage{
+    margin-top: 50px;
+  }
+
+  .likes{
+    background-color: cyan;
+    border-radius: 20px;
+    display: flex;
+    padding: 5px;
+    margin: 10px;
+  }
+
+
+
+
+
+
+
+  /* class Solution {
+    public:
+        int ans=INT_MIN; 
+        void f(vector<vector<int>>& grid, int i, int j, int num, int die, vector<vector<int>>& dp){
+    
+            if(i==grid.size()-1 && j==grid[0].size()-1){
+                num+=grid[i][j];
+                
+                die=min(die, num);
+                
+                ans=max(ans, die);
+    
+                return;
+            }
+            
+    
+            num+=grid[i][j];
+            
+            die=min(die, num);
+    
+            //cout<<i<<" "<<j<<endl;
+            // if(dp[i][j]!=INT_MIN) {
+            //     //cout<<i<<" "<<j<<endl;
+            //     // return;
+            // }
+            // else{
+                int k1=INT_MAX;
+                int k2=INT_MAX;
+    
+                if(i<grid.size()-1){
+                    k1=min(k1, f(grid, i+1, j, num, die, dp));
+                }
+                if(j<grid[0].size()-1){
+                    k2=min(k2, f(grid, i, j+1, num, die, dp));
+                }
+                return min(k1, k2);
+            
+    
+            
+        }
+        int calculateMinimumHP(vector<vector<int>>& grid) {
+            int init=grid[0][0];
+            int m=grid.size();
+            int n=grid[0].size();
+            vector<vector<int>>dp(m, vector<int>(n,INT_MIN));
+    
+            f( grid, 0, 0, 0, INT_MAX, dp);
+            for(auto i: dp){
+                for(auto j:i) cout<<j<<" ";
+                cout<<endl;
+            }
+            return max(1-ans,1);
+        }
+    }; */
