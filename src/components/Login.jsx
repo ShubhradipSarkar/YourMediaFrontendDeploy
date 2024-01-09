@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const apiUrl = `http://127.0.0.1:8000/api/v1/login`; // Replace 'your-api-url' with the actual API endpoint
+    const apiUrl = `https://yourmedia.onrender.com/api/v1/login`; // Replace 'your-api-url' with the actual API endpoint
 
     axios
       .post(apiUrl, {
@@ -24,7 +24,7 @@ const Login = () => {
         const userId = response.data.id;
         const userName=response.data.name;
         console.log("current user id = "+ userId)
-        // const res=axios.get(`http://127.0.0.1:8000/api/v1/Userss/${userId}/`);
+        // const res=axios.get(`https://yourmedia.onrender.com/api/v1/Userss/${userId}/`);
         // console.log('the response:::');
         // console.log(res.data);
         // localStorage.setItem('userName', res.user_name);

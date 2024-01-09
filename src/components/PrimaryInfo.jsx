@@ -17,7 +17,7 @@ const Primaryinfo = () => {
     
     const handleSubmit = async (e) => {
       e.preventDefault();
-      const apiUrl = `http://127.0.0.1:8000/api/v1/Userss/`; // Replace 'your-api-url' with the actual API endpoint
+      const apiUrl = `https://yourmedia.onrender.com/api/v1/Userss/`; // Replace 'your-api-url' with the actual API endpoint
       let data={
         user_name:name,
         about:about,
@@ -41,7 +41,7 @@ const Primaryinfo = () => {
     }
 
     const updateProfile = async(e)=>{
-      const apiUrl = `http://127.0.0.1:8000/api/v1/UserUpdate/${myId}/`; // Replace 'your-api-url' with the actual API endpoint
+      const apiUrl = `https://yourmedia.onrender.com/api/v1/UserUpdate/${myId}/`; // Replace 'your-api-url' with the actual API endpoint
       let data={
         user_name:name,
         about:about,

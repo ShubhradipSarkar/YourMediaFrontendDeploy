@@ -5,7 +5,7 @@ function App() {
   const [details, setDetails] = useState([]);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/v1/Friends/')
+    axios.get('https://yourmedia.onrender.com/api/v1/Friends/')
       .then(res => {
         setDetails(res.data);
       })

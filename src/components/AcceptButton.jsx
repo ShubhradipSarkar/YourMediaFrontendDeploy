@@ -20,7 +20,7 @@ const AcceptButton = ({deleteRequest, friendId, message}) => {
             setErrMsg('Could not add as friend'); // If friendId is null, set the error message to 'lol'
             return; // Return early and do not make the API call
           }
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/Friends/', {
+      const response = await axios.post('https://yourmedia.onrender.com/api/v1/Friends/', {
         self_id: friendId,
         friend_id: myId,
       });
@@ -37,7 +37,7 @@ const AcceptButton = ({deleteRequest, friendId, message}) => {
 
     //   console.log('deleted = '+deleteRequest);
       console.log('delete id = '+deleteRequest)
-      await axios.delete(`http://127.0.0.1:8000/api/v1/friendRequest/${deleteRequest}/`);
+      await axios.delete(`https://yourmedia.onrender.com/api/v1/friendRequest/${deleteRequest}/`);
 
     } catch (error) {
       console.error(error);

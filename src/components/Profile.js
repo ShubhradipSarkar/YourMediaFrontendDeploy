@@ -46,8 +46,8 @@ function Profile(){
         for (const id of friends) {
             console.log('holulu = ', id.friend_id);
             try {
-              const response = await axios.get(`http://127.0.0.1:8000/api/v1/Userss/?search=${id.friend_id}`);
-              //console.log(`http://127.0.0.1:8000/api/v1/Userss/?search=${id.friend_id}`);
+              const response = await axios.get(`https://yourmedia.onrender.com/api/v1/Userss/?search=${id.friend_id}`);
+              //console.log(`https://yourmedia.onrender.com/api/v1/Userss/?search=${id.friend_id}`);
               //const data=await response.json;
               //setResponses(response.data);
               responses.push(response.data);
@@ -64,7 +64,7 @@ function Profile(){
           
     }
     useEffect(()=>{
-        axios.get(`http://127.0.0.1:8000/api/v1/Userss/${ProfileId}/`)
+        axios.get(`https://yourmedia.onrender.com/api/v1/Userss/${ProfileId}/`)
         .then(res => {
             SetData(res.data);
           })
@@ -74,7 +74,7 @@ function Profile(){
         
         //const name=localStorage.getItem('userName');
         //console.log('profileid = ',ProfileId)
-        axios.get(`http://127.0.0.1:8000/api/v1/Posts/?search=${ProfileId}`)
+        axios.get(`https://yourmedia.onrender.com/api/v1/Posts/?search=${ProfileId}`)
         .then(res=>{
             
             setResults(res.data);
@@ -83,7 +83,7 @@ function Profile(){
             //console.log(err);
         });
 
-        axios.get(`http://127.0.0.1:8000/api/v1/Friends/?search=${ProfileId}`)
+        axios.get(`https://yourmedia.onrender.com/api/v1/Friends/?search=${ProfileId}`)
         .then(res=>{
             
             SetFriends(res.data);

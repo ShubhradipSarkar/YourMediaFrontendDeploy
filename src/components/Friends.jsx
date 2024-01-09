@@ -13,8 +13,8 @@ function Locals(){
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const apiUrl = `http://127.0.0.1:8000/api/v1/Friends/`; // Replace 'your-api-url' with the actual API endpoint
-        // `http://127.0.0.1:8000/api/v1/Friends/${id}`;
+        const apiUrl = `https://yourmedia.onrender.com/api/v1/Friends/`; // Replace 'your-api-url' with the actual API endpoint
+        // `https://yourmedia.onrender.com/api/v1/Friends/${id}`;
         axios.get(apiUrl)
         .then(response => {
             setResponseData(response.data);
@@ -51,9 +51,9 @@ function Locals(){
             const promises = filteredData.map(async age => {
                 console.log('age = ')
                 console.log(age)
-                console.log(`http://127.0.0.1:8000/api/v1/Userss/${age}`)
-                //console.log(`http://127.0.0.1:8000/api/v1/Userss/${dogId}/`)
-              const response = await axios.get(`http://127.0.0.1:8000/api/v1/Userss/${age}`);
+                console.log(`https://yourmedia.onrender.com/api/v1/Userss/${age}`)
+                //console.log(`https://yourmedia.onrender.com/api/v1/Userss/${dogId}/`)
+              const response = await axios.get(`https://yourmedia.onrender.com/api/v1/Userss/${age}`);
               return response.data;
             });
     

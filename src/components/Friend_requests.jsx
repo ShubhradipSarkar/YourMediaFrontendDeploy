@@ -12,7 +12,7 @@ function Friend_requests(){
     const [status, SetStatus]=useState('No more friend requests for now...');
   
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/v1/SearchView/${userId}/`)
+        axios.get(`https://yourmedia.onrender.com/api/v1/SearchView/${userId}/`)
           .then(res => {
             console.log(res.data);
             setDetails(res.data);

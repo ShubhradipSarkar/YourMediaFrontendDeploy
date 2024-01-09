@@ -11,7 +11,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const apiUrl = `http://127.0.0.1:8000/api/v1/register`; // Replace 'your-api-url' with the actual API endpoint
+    const apiUrl = `https://yourmedia.onrender.com/api/v1/register`; // Replace 'your-api-url' with the actual API endpoint
       
       
     axios.post(apiUrl, {
@@ -21,7 +21,7 @@ const Register = () => {
       })
       
       .then(response => {
-        navigate('/login');
+        navigate('/');
           //setResponseData(response.data);
       })
       .catch(error => {

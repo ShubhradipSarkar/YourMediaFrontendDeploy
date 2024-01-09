@@ -11,7 +11,7 @@ const ApiButton = ({friendId,text}) => {
 
   const handleApiCall = async () => {
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/Posts/', {
+      const response = await axios.post('https://yourmedia.onrender.com/api/v1/Posts/', {
         self_id: myId,
         quote: thoughts,
         name: name,

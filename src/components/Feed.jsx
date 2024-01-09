@@ -21,9 +21,9 @@ function Feed(){
     ///////////////////////////
     useEffect(() => {
       // event.preventDefault();
-      const apiUrl = `http://127.0.0.1:8000/api/v1/Friends/`; // Replace 'your-api-url' with the actual API endpoint
+      const apiUrl = `https://yourmedia.onrender.com/api/v1/Friends/`; // Replace 'your-api-url' with the actual API endpoint
       
-      const apiUrl_posts='http://127.0.0.1:8000/api/v1/Posts/';
+      const apiUrl_posts='https://yourmedia.onrender.com/api/v1/Posts/';
 
       axios.get(apiUrl)
       .then(response => {
@@ -41,7 +41,7 @@ function Feed(){
           console.error('Error:', error);
       });
 
-      axios.get(`http://localhost:8000/api/v1/Likes/?search=${myId}`)
+      axios.get(`https://yourmedia.onrender.com/api/v1/Likes/?search=${myId}`)
       .then(res=>{
           SetLiker(res.data);
       })
@@ -57,7 +57,7 @@ function Feed(){
       console.log('post id = ', primaryKey);
 
       try{
-        const response = await axios.post("http://localhost:8000/api/v1/Likes/",{
+        const response = await axios.post("https://yourmedia.onrender.com/api/v1/Likes/",{
         "post_id":primaryKey,
         "liker_id":myId,
       }).then(console.log('liked'));
@@ -100,7 +100,7 @@ function Feed(){
         if (!key){
           return;
         }
-        const response = await axios.get(`http://127.0.0.1:8000/api/v1/Userss/${key}/`);
+        const response = await axios.get(`https://yourmedia.onrender.com/api/v1/Userss/${key}/`);
         const data = response.data;
         //setFriendName(data.user_name);
         const name=data.user_name

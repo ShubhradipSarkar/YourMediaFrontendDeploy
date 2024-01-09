@@ -15,8 +15,8 @@ const SearchComponent = () => {
   };
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/v1/Userss/?search=${query}`);
-      console.log(`http://127.0.0.1:8000/api/v1/Userss/?search=${query}`)
+      const response = await axios.get(`https://yourmedia.onrender.com/api/v1/Userss/?search=${query}`);
+      console.log(`https://yourmedia.onrender.com/api/v1/Userss/?search=${query}`)
       console.log(response.data);
       setResults(response.data);
     } catch (error) {

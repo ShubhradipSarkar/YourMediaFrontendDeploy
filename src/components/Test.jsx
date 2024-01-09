@@ -22,9 +22,9 @@ const Test = () => {
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    const apiUrl = `http://127.0.0.1:8000/api/v1/Friends/`; // Replace 'your-api-url' with the actual API endpoint
+    const apiUrl = `https://yourmedia.onrender.com/api/v1/Friends/`; // Replace 'your-api-url' with the actual API endpoint
     
-    const apiUrl_posts='http://127.0.0.1:8000/api/v1/Posts/';
+    const apiUrl_posts='https://yourmedia.onrender.com/api/v1/Posts/';
 
     axios.get(apiUrl)
     .then(response => {
@@ -63,7 +63,7 @@ const Test = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/v1/Userss/${id}/`);
+      const response = await axios.get(`https://yourmedia.onrender.com/api/v1/Userss/${id}/`);
       const data = response.data;
       setFriendName(data.user_name);
       console.log('String from API saved in variable item:', data);
@@ -82,7 +82,7 @@ const Test = () => {
     validIds.map((id) => console.log('id=' + id));
 
     const responses = await Promise.all(
-      validIds.map((id) => axios.get(`http://127.0.0.1:8000/api/v1/Userss/${id}/`))
+      validIds.map((id) => axios.get(`https://yourmedia.onrender.com/api/v1/Userss/${id}/`))
     );
   
         const fetchedDogsData = responses.map((response) => response.data);

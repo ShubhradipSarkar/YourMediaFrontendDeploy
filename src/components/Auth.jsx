@@ -14,7 +14,7 @@ function Auth(){
 
     const handleApiCall = async () => {
         try {
-          const response = await axios.post('http://127.0.0.1:8000/api/v1/Userss/', {
+          const response = await axios.post('https://yourmedia.onrender.com/api/v1/Userss/', {
             user_name:name,
             about:about,
             password:password,

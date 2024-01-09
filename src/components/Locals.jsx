@@ -25,7 +25,7 @@ function Locals() {
     navigate('/profile');
   };
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/v1/Userss/')
+    axios.get('https://yourmedia.onrender.com/api/v1/Userss/')
       .then(res => {
         setDetails(res.data);
       })

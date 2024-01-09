@@ -17,11 +17,11 @@ const ApiButton = ({friendId, msg}) => {
             setErrMsg(msg); // If friendId is null, set the error message to 'lol'
             return; // Return early and do not make the API call
           }
-      const response = await axios.post('http://127.0.0.1:8000/api/v1/Friends/', {
+      const response = await axios.post('https://yourmedia.onrender.com/api/v1/Friends/', {
         self_id: friendId,
         friend_id: myId,
       });
-      const friendRequest = await axios.post('http://127.0.0.1:8000/api/v1/friendRequest/', {
+      const friendRequest = await axios.post('https://yourmedia.onrender.com/api/v1/friendRequest/', {
         request_from: myId,
         request_to: friendId,
       });

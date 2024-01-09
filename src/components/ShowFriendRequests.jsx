@@ -20,9 +20,9 @@ const RequestEntry = ({id , entry }) => {
     window.location.reload();
   };
   const fetchAdditionalData = () => {
-    axios.get(`http://127.0.0.1:8000/api/v1/Userss/${entry.request_from}/`)
+    axios.get(`https://yourmedia.onrender.com/api/v1/Userss/${entry.request_from}/`)
       .then(response => {
-        console.log(`http://127.0.0.1:8000/api/v1/Userss/${entry.request_from}/`);
+        console.log(`https://yourmedia.onrender.com/api/v1/Userss/${entry.request_from}/`);
         setData(response.data);
       })
       .catch(error => {
